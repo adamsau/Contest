@@ -49,8 +49,8 @@ void pushup(int p) {
 }
 
 void update(int l, int r, int c) {
-	int _l, int _r;
-	_l = l += n, _r = r += n;
+	int _l, _r;
+	_l = (l += n), _r = (r += n);
 	
 	pushdown(l);
 	pushdown(r - 1);
@@ -65,7 +65,7 @@ void update(int l, int r, int c) {
 }
 
 void query(int l, int r) {
-	int _l = l, int _r = r;
+	int _l = l, _r = r;
 	l += n, r += n;
 	
 	pushdown(l);
@@ -116,7 +116,7 @@ int main() {
 			int a = query(l - 1, r - d);
 			int b = query(l - 1 + d, r);
 			if(a == b) printf("YES\n");
-			else printf("NO");
+			else printf("NO\n");
 		}
 	}
 	
