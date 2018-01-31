@@ -72,7 +72,7 @@ int main() {
 		int l, r, k;
 		scanf("%d %d %d", &l, &r, &k);
 		
-		printf("%d", rmap[query(root[l - 1], root[r], 1, n, k)]);
+		printf("%d", rmp[query(root[l - 1], root[r], 1, n, k)]);
 	}
 
 	return 0;
