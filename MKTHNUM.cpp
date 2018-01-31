@@ -59,7 +59,7 @@ int main() {
 	for(int i = 0; i < n; ++i) scanf("%d", a + i), mp[a[i]] = 0;
 	
 	int cnt = 0;
-	for(auto& it: mp) ++cnt, mp[it->first] = cnt, rmp[it->second] = [it->first];
+	for(auto& it: mp) ++cnt, mp[it->first] = cnt, rmp[cnt] = [it->first];
 	
 	build(0, 1, n);
 	
